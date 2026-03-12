@@ -1,0 +1,33 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 .claude/hooks/validate_prd.py",
+            "description": "Validate PRD structure and required sections",
+            "condition": "tool_input.file_path contains 'generated_prds'"
+          },
+          {
+            "type": "command",
+            "command": "python3 .claude/hooks/save_artifact.py",
+            "description": "Save PRD artifact with timestamped filename",
+            "condition": "tool_input.file_path contains 'generated_prds'"
+          }
+        ]
+      }
+    ]
+  },
+  "permissions": {
+    "allow": [
+      "Read(.claude/skills/**)",
+      "Write(outputs/generated_prds/**)",
+      "Read(docs/**)"
+    ]
+  },
+  "env": {
+    "PROJECT_ROOT": "."
+  }
+}

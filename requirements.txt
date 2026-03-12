@@ -1,0 +1,9 @@
+# claude_code_prd_generator dependencies
+# Install with: pip install -r requirements.txt
+
+# No Python runtime dependencies required for V1.
+# Hooks use only Python standard library modules.
+
+# Optional: for future MCP client integrations
+# anthropic>=0.40.0
+# httpx>=0.27.0
