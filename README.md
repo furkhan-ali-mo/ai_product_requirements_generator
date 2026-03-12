@@ -51,7 +51,7 @@ A Claude Code workspace with:
 | **CLAUDE.md** | Defines workflow order, writing standards, scope constraints, and completion criteria |
 | **Skills** | 8 modular skills covering discovery, research, feature design, prioritization, PRD writing, and review |
 | **Hooks** | `validate_prd.py` checks required sections; `save_artifact.py` persists the artifact |
-| **MCP Servers** | Browser/Search MCP for competitor research; Filesystem MCP for artifact management |
+| **MCP Servers** | Browser/Search MCP for competitor research and market scanning |
 | **Dynamic Subagents** | `subagent_creation` skill guides Claude to create persistent `.claude/agents/` files on demand |
 
 ---
@@ -88,7 +88,7 @@ Claude then orchestrates the full workflow:
 4. prioritization       → rank features by value and effort
 5. prd_generation       → write the full structured PRD
 6. prd_quality_review   → validate all 12 required sections
-7. save artifact        → persist to outputs/generated_prds/ (Filesystem MCP)
+7. save artifact        → persist to outputs/generated_prds/
 ```
 
 ---
@@ -118,11 +118,6 @@ Used during competitor research to:
 - Search for competing products
 - Extract positioning and feature signals
 - Identify market gaps
-
-**Filesystem MCP**
-Used to:
-- Read skill templates and reference files
-- Save final PRD artifacts to `outputs/`
 
 MCP servers must be configured before use. See `.env.example` for required variables and `docs/architecture.md` for setup details.
 

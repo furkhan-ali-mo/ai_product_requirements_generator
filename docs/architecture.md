@@ -66,15 +66,11 @@ This separation ensures that structural completeness is guaranteed by code, not 
 
 ### 4. MCP for Live Data
 
-Two MCP integrations extend Claude's reach beyond training knowledge:
-
-**Browser/Search MCP**
+**Browser/Search MCP** extends Claude's reach beyond training knowledge:
 - Used in `competitor_research` to find real competitors and market signals
 - Returns structured search results and page content for Claude to analyze
 
-**Filesystem MCP**
-- Provides a stable, explicit API for reading templates and writing artifacts
-- Used as a complement to Claude's native file tools in constrained environments
+All file operations (reading templates, saving artifacts) use Claude Code's native `Read` and `Write` tools — no separate Filesystem MCP needed.
 
 ### 5. Dynamic Subagents
 

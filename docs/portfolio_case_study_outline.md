@@ -74,7 +74,7 @@ Frame each feature explicitly:
 | CLAUDE.md | Full workspace instructions including workflow order, writing standards, scope constraints, completion criteria |
 | Skills | 8 skills with concise SKILL.md + supporting reference files; modular, composable, standalone-invocable |
 | Hooks | PostToolUse hooks with Python validation and artifact persistence; deterministic exit codes |
-| MCP | Browser/Search MCP for live data; Filesystem MCP for artifact management; graceful fallback |
+| MCP | Browser/Search MCP for live competitor research; graceful fallback to training knowledge |
 | Subagents | Dynamic creation via skill; interactive spec collection; persistent `.claude/agents/` files |
 
 ### 6. What You'd Build Next

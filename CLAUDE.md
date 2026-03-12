@@ -78,7 +78,6 @@ The workflow is complete when:
 ## MCP Integrations
 
 - **Browser/Search MCP** — used during competitor research for market scanning
-- **Filesystem MCP** — used to read templates and save PRD artifacts
 
 ## Hooks
 
